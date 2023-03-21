@@ -13,7 +13,7 @@ export const App = () => {
   });
 
   const onLeaveFeedback = ({ target: { name } }) => {
-    setFeedback({ ...feedback, [name]: feedback[name] + 1 });
+    setFeedback(prev => ({ ...prev, [name]: feedback[name] + 1 }));
   };
 
   const countTotalFeedback = () => {
